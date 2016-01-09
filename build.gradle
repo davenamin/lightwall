@@ -1,0 +1,30 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'org.jfree:jfreechart:1.0.19'
+    compile 'io.netty:netty-all:4.0.33.Final'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'sim/src/java'
+        }
+        resources {
+            srcDir 'sim/src/resources'
+        }
+    }
+    test {
+        java {
+            srcDir 'sim/test/java'
+        }
+        resources {
+            srcDir 'sim/test/resources'
+        }
+    }
+}
